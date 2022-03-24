@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Consulta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/litera/bootstrap.min.css">
+    
+</head>
+<body>
+    
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Solicitud De Crédito</h1>
+                        <hr>
+                        <form action="sendemail" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="text" name="cliente" class="form-control" placeholder="Nombre Del Cliente" autofocus required>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="text" name="cedula" class="form-control" placeholder="Número de Cédula Jurídica" required>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="text" name="tamano" class="form-control" placeholder="Tamaño del Sistema(kW)" required>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="text" name="precio" class="form-control" placeholder="Precio del Sistema(USD)" required>
+                            </div>
+                            <hr>
+                            <br>
+                            
+                            <label for="file">Estados Finacieros</label>
+                            <div class="form-group">
+                                <input type="file" name="file" class="form-control" placeholder="Estados Financieros" multiple id ="file" >
+                            </div>
+                            <hr>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Enviar
+                            </button>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .form-control:hover{
+            background-color: rgb(212, 236, 255);
+            transition: 1s;
+        }
+    </style>
+</body>
+</html>
